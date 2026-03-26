@@ -1,0 +1,47 @@
+services:
+  # Type of service
+  type: web
+  
+  # Name of your service
+  name: programming-tutorials
+  
+  # Runtime environment
+  runtime: docker
+  
+  # Plan (free or paid)
+  plan: free
+  
+  # Build configuration
+  buildCommand: ""
+  startCommand: ""
+  
+  # Health check path
+  healthCheckPath: /
+  
+  # Environment variables (these will be set in Render dashboard)
+  envVars:
+    - key: DB_HOST
+      sync: false
+    - key: DB_PORT
+      sync: false
+    - key: DB_NAME
+      sync: false
+    - key: DB_USER
+      sync: false
+    - key: DB_PASS
+      sync: false
+    - key: APP_ENV
+      value: production
+    - key: APP_DEBUG
+      value: false
+    - key: BASE_URL
+      sync: false
+
+  # Auto-deploy configuration
+  autoDeploy: true
+  
+  # Branch to deploy
+  branch: main
+  
+  # Root directory
+  rootDir: .

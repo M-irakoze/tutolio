@@ -1,0 +1,25 @@
+# Database Configuration for Programming Tutorials Platform
+
+# Local Development (XAMPP/MAMP)
+DB_HOST="gateway01.eu-central-1.prod.aws.tidbcloud.com"
+DB_PORT="4000"
+DB_NAME="tutorials_platform"
+DB_USER="4FpxFa9rDe6N6p4.root"
+DB_PASS="nVqQt9d1DCLuD0z1"
+
+# TiDB Production Settings (uncomment and fill in your TiDB details)
+# DB_HOST=gateway01.ap-southeast-1.prod.aws.tidbcloud.com
+# DB_PORT=4000
+# DB_NAME=your_database_name
+# DB_USER=your_tidb_username
+# DB_PASS=your_tidb_password
+
+# TiDB SSL Settings (if required)
+# DB_SSL_CA=/path/to/ca.pem
+# DB_SSL_CERT=/path/to/client-cert.pem
+# DB_SSL_KEY=/path/to/client-key.pem
+
+# Application Settings
+APP_ENV=development
+APP_DEBUG=true
+BASE_URL=http://localhost:8000
