@@ -2,6 +2,19 @@
 // Database configuration for Programming Tutorials Platform
 // Supports both local development and TiDB production
 
+// Load environment variables from .env file if it exists
+if (file_exists(__DIR__ . '/../.env')) {
+    $lines = file(__DIR__ . '/../.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos($line, '=') !== false && !str_starts_with($line, '#')) {
+            list($key, $value) = explode('=', $line, 2);
+            $value = trim($value, '"');
+            $_ENV[trim($key)] = $value;
+            putenv(trim($key) . '=' . $value);
+        }
+    }
+}
+
 // Get environment variables or use defaults
 $db_host = $_ENV['DB_HOST'] ?? 'localhost';
 $db_port = $_ENV['DB_PORT'] ?? '3306';
