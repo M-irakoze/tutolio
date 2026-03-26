@@ -16,11 +16,11 @@ if (file_exists(__DIR__ . '/../.env')) {
 }
 
 // Get environment variables or use defaults
-$db_host = $_ENV['DB_HOST'] ?? 'localhost';
-$db_port = $_ENV['DB_PORT'] ?? '3306';
+$db_host = $_ENV['DB_HOST'] ?? "gateway01.eu-central-1.prod.aws.tidbcloud.com";
+$db_port = $_ENV['DB_PORT'] ?? '4000';
 $db_name = $_ENV['DB_NAME'] ?? 'tutorials_platform';
-$db_user = $_ENV['DB_USER'] ?? 'root';
-$db_pass = $_ENV['DB_PASS'] ?? '';
+$db_user = $_ENV['DB_USER'] ?? '4FpxFa9rDe6N6p4.root';
+$db_pass = $_ENV['DB_PASS'] ?? 'nVqQt9d1DCLuD0z1';
 
 // For TiDB, you might need SSL settings
 $ssl_ca = $_ENV['DB_SSL_CA'] ?? null;
